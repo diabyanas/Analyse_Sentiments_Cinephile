@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Avis cinophile</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+    		<h2 class='container-heading'><span>Avis cinéphile</span> </h2>
+            <div class='description'>
+    			<p>Application web ML dévéloppé avec Flask</p>
+    		</div>
+    	</div>
+
+        <!-- Text Area -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Entrer votre avis... (ex: C'est le plus médiocre des films que j'ai jamais regardé)"></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+    </body>
+</html>
